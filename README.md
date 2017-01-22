@@ -1,7 +1,9 @@
 # Uhm, dotfiles.
 
-I will work on other stuff of my dotfiles whenever I have time. Right now, I am just focusing on Rails.
+> “I used to be indecisive but now I am not quite sure.”
 
-Get in touch with me on [twitter](http://www.twitter.com/ramidem).
+> [Source](“I used to be indecisive but now I am not quite sure.”)
 
-test test test
+Just figuring things out. I am sure you understand. You have been to this stage before.
+
+Get in touch: [twitter](http://www.twitter.com/ramidem).
