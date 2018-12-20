@@ -52,8 +52,16 @@ set tabstop=2
 set autoindent
 
 " Mapping
+let mapleader = "\<Space>"
+
 " Pressing jj fast escapes Insert Mode
 :imap jj <Esc>
+
+" Leader w saves the file
+noremap <Leader>w :w<CR>
+
+" Leader q quits the file
+noremap <Leader>q :q<CR>
 
 " The Swap File
 set noswapfile
@@ -76,3 +84,10 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " ctrlp.vim Mapping
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Vim Airline
+let g:airline_theme='dracula'
+call airline#parts#define_accent('mode', 'none')
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#tabline#enabled = 1
+
