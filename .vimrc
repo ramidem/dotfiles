@@ -12,8 +12,8 @@ syntax on
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Folding
-set foldenable
-set foldmethod=indent
+" set foldenable
+" set foldmethod=indent
 
 " Line numbers
 set number relativenumber
@@ -50,6 +50,11 @@ set laststatus=2
 " Tabs and Indenting
 set tabstop=2
 set autoindent
+
+" Column
+set colorcolumn=80
+highlight OverLength ctermbg=black ctermfg=white
+match OverLength /\%81v.\+/
 
 " Mapping
 let mapleader = "\<Space>"
