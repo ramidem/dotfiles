@@ -56,6 +56,20 @@ echo "Created init.vim symlink"
 echo "ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim"
 echo ""
 
+# Htop
+echo ""
+echo "Installing htop"
+echo ""
+sudo apt install htop -y
+echo ""
+
+# Htop
+echo ""
+echo "Installing curl"
+echo ""
+sudo apt install curl -y
+echo ""
+
 # Zsh
 echo ""
 echo "Installing Zsh"
