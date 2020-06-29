@@ -13,6 +13,11 @@ sudo apt update && sudo apt upgrade -y
 # Install Complete Multimedia Support
 sudo apt install ubuntu-restricted-extras
 
+sudo apt install tree -y
+
+# Install Powerline Fonts
+sudo apt install fonts-powerline -y
+
 # Clean up
 echo ""
 echo "Cleaning Up"
