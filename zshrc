@@ -9,27 +9,11 @@ ZSH_THEME="dracula"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# Plugins
 plugins=(git colored-man-pages command-not-found zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="nvim"
 alias q="exit"
 
@@ -38,11 +22,14 @@ alias upgrade="sudo apt-get upgrade"
 alias dist-upgrade="sudo apt-get dist-upgrade"
 alias cleanup="sudo apt-get autoclean && sudo apt-get autoremove"
 
+# Dotfiles
+alias dotfiles="cd ~/dotfiles && pwd"
+
 # Dropbox/Code/Github
-alias github="cd /home/rmdm/Dropbox/Code/Github && pwd"
+alias github="cd ~/Dropbox/Code/Github && pwd"
 
 # Dropbox/Code/Zuitt
-alias zuitt="cd /home/rmdm/Dropbox/Code/Zuitt && pwd"
+alias zuitt="cd ~/Dropbox/Code/Zuitt && pwd"
 
 # npm install -g browser-sync
 # https://dev.to/fidelve/using-vim-as-your-main-editor-for-web-development-5a73
