@@ -1,15 +1,6 @@
-" Vim Plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-" -----------------------------------------------------------------------------
-
 syntax on
 set cursorline
-set guicursor=
-set relativenumber
+set number relativenumber
 set ignorecase
 set hlsearch
 set incsearch
@@ -18,10 +9,6 @@ set nowrap
 set noswapfile
 set noshowmatch
 set nohlsearch
-
-" TO REVIEW
-set noerrorbells
-set smartindent
 set smartcase
 set undodir=~/.vim/undodir
 set undofile
@@ -35,19 +22,18 @@ set scrolloff=8
 set showcmd
 
 " -----------------------------------------------------------------------------
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
+" Vim Plug
 " -----------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
 " Dracula Colorscheme
-" Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'gruvbox-community/gruvbox'
-Plug 'sainnhe/gruvbox-material'
+Plug 'gruvbox-community/gruvbox'
 
 " Airline Status Line
 Plug 'vim-airline/vim-airline'
+
+" Tmuxline
+Plug 'edkolev/tmuxline.vim'
 
 " Interactive Scratchpad
 Plug 'metakirby5/codi.vim'
@@ -55,28 +41,26 @@ Plug 'metakirby5/codi.vim'
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
+" Fuzzy Finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" --- Make sure I am in project's root folder
+Plug 'airblade/vim-rooter'
+
+Plug 'preservim/nerdtree'
+
+Plug 'editorconfig/editorconfig-vim'
+
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
-" -----------------------------------------------------------------------------
 
 " -----------------------------------------------------------------------------
 " Color
 " -----------------------------------------------------------------------------
-" Important!!
-if has('termguicolors')
-  set termguicolors
-endif
-
-" Set contrast.
-" This configuration option should be placed before `colorscheme gruvbox-material`.
-" Available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_material_background = 'soft'
-
-colorscheme gruvbox-material
-
-" For dark version.
+colorscheme gruvbox
 set background=dark
 
 " -----------------------------------------------------------------------------
@@ -84,23 +68,35 @@ set background=dark
 " -----------------------------------------------------------------------------
 let mapleader = "\<Space>"
 
+" Edit vimrc
+nmap ,ev :tabedit ~/dotfiles/vimrc<CR>
+
 " --- Press `jj` to escape insert mode
 :imap jj <Esc>
 
 " --- Space + w = save
 noremap <Leader>w :w<CR>
+"
+" --- Space + Q = close current buffer
+nmap <Leader>q :tabc<CR>
 " --- Space + q = quit
-noremap <Leader>q :q<CR>
-" --- Space + Q = save then quit
-nmap <Leader>Q :w :q<CR>
+noremap <Leader>Q :q<CR>
 
 " --- Space + <direction> = switch between windows
 noremap <Leader>h :wincmd h<CR>
 noremap <Leader>j :wincmd j<CR>
 noremap <Leader>k :wincmd k<CR>
 noremap <Leader>l :wincmd l<CR>
+
 " --- Space + x = swap windows
 noremap <Leader>x :wincmd x<CR>
+" --- Space + > = resize window
+noremap <Leader>> :vertical resize 86<CR>
+" --- split window: vertical
+nmap sv :vs<CR>
+
+" --- new tab
+nmap te :tabedit<CR>
 
 " --- Source vimrc
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
@@ -109,10 +105,10 @@ nnoremap <Leader><CR> :so ~/.vimrc<CR>
 " Plugins Settings
 " -----------------------------------------------------------------------------
 " Vim Airline Status Line
+" let g:airline_theme = 'gruvbox_material'
 " --- enable tabline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-" let g:airline#extensions#tabline#show_tab_count = 2
 let g:airline#extensions#tabline#exclude_preview = 1
 
 " ---  enable powerline fonts
@@ -120,35 +116,57 @@ let g:airline_powerline_fonts = 1
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
+
 " define the set of text to display for each mode.
 let g:airline_mode_map = {
-  \ '__'     : '-',
-  \ 'c'      : 'C',
-  \ 'i'      : 'I',
-  \ 'ic'     : 'I',
-  \ 'ix'     : 'I',
-  \ 'n'      : 'N',
-  \ 'multi'  : 'M',
-  \ 'ni'     : 'N',
-  \ 'no'     : 'N',
-  \ 'R'      : 'R',
-  \ 'Rv'     : 'R',
-  \ 's'      : 'S',
-  \ 'S'      : 'S',
-  \ ''     : 'S',
-  \ 't'      : 'T',
-  \ 'v'      : 'V',
-  \ 'V'      : 'V',
-  \ ''     : 'V',
-  \ }
+      \ '__'     : '-',
+      \ 'c'      : 'C',
+      \ 'i'      : 'I',
+      \ 'ic'     : 'I',
+      \ 'ix'     : 'I',
+      \ 'n'      : 'N',
+      \ 'multi'  : 'M',
+      \ 'ni'     : 'N',
+      \ 'no'     : 'N',
+      \ 'R'      : 'R',
+      \ 'Rv'     : 'R',
+      \ 's'      : 'S',
+      \ 'S'      : 'S',
+      \ ''     : 'S',
+      \ 't'      : 'T',
+      \ 'v'      : 'V',
+      \ 'V'      : 'V',
+      \ ''     : 'V',
+      \ }
 " Note: 'multi' is for displaying the multiple cursor mode
 
-" We don't need to see things like -- INSERT -- anymore
+" https://github.com/iambibhas/tmux-status-scripts
+"? https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb
+" https://github.com/edkolev/tmuxline.vim
+let g:tmuxline_powerline_separators = 0
+let airline#extensions#tmuxline#color_template = 'insert'
+" let g:tmuxline_preset = 'tmux'
+" custom preset with shell commands
+let g:tmuxline_preset = {
+      \'a'    : '#(whoami)',
+      \'b'    : '#W',
+      \'c'    : '',
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W',
+      \'x'    : '',
+      \'y'    : '',
+      \'z'    : '#H'}
+
+" do not show mode. e.g -- INSERT --
 set noshowmode
 
 " Codi.Vim
 map <c-c> :Codi!! javascript<cr>
 let g:codi#width=25
+
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+
 " -----------------------------------------------------------------------------
 " Coc.vim Stuff
 " -----------------------------------------------------------------------------
@@ -163,8 +181,7 @@ set nobackup
 set nowritebackup
 
 " --- Give more space for displaying messages
-set cmdheight=2
-set cmdheight=2
+" set cmdheight=2
 
 " --- Having longer updatetime leads to noticeable delays and poor user
 "     experience
@@ -220,30 +237,30 @@ nmap <S-l> :tabnext<CR>
 " Move entire line up or down
 " https://stackoverflow.com/questions/741814/move-entire-line-up-and-down-in-vim
 function! s:swap_lines(n1, n2)
-    let line1 = getline(a:n1)
-    let line2 = getline(a:n2)
-    call setline(a:n1, line2)
-    call setline(a:n2, line1)
+  let line1 = getline(a:n1)
+  let line2 = getline(a:n2)
+  call setline(a:n1, line2)
+  call setline(a:n2, line1)
 endfunction
 
 function! s:swap_up()
-    let n = line('.')
-    if n == 1
-        return
-    endif
+  let n = line('.')
+  if n == 1
+    return
+  endif
 
-    call s:swap_lines(n, n - 1)
-    exec n - 1
+  call s:swap_lines(n, n - 1)
+  exec n - 1
 endfunction
 
 function! s:swap_down()
-    let n = line('.')
-    if n == line('$')
-        return
-    endif
+  let n = line('.')
+  if n == line('$')
+    return
+  endif
 
-    call s:swap_lines(n, n + 1)
-    exec n + 1
+  call s:swap_lines(n, n + 1)
+  exec n + 1
 endfunction
 
 noremap <silent> <A-k> :call <SID>swap_up()<CR>
@@ -255,3 +272,17 @@ noremap <silent> <A-j> :call <SID>swap_down()<CR>
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 " --- Insert mode
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+" Empty value to disable preview window altogether
+" let g:fzf_preview_window = 'right:70%'
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULTS_OPTS = '--reverse'
+
+" Open File
+noremap <Leader>f :Files<CR>
+" View Buffers
+noremap <Leader>b :Buffers<CR>
+
+":set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+"      \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+"      \,sm:block-blinkwait175-blinkoff150-blinkon175
