@@ -77,10 +77,11 @@ nmap ,ev :tabedit ~/dotfiles/vimrc<CR>
 " --- Space + w = save
 noremap <Leader>w :w<CR>
 "
-" --- Space + Q = close current buffer
-nmap <Leader>q :tabc<CR>
 " --- Space + q = quit
-noremap <Leader>Q :q<CR>
+nmap <Leader>q :q<CR>
+
+" --- Space + Q = close current buffer
+nmap qq :tabc<CR>
 
 " --- Space + <direction> = switch between windows
 noremap <Leader>h :wincmd h<CR>
@@ -88,12 +89,37 @@ noremap <Leader>j :wincmd j<CR>
 noremap <Leader>k :wincmd k<CR>
 noremap <Leader>l :wincmd l<CR>
 
+" make the current pane obvious when switching to it
+augroup ReduceNoise
+  autocmd!
+  autocmd WinEnter * :call ResizeSplits()
+  autocmd WinEnter * set number relativenumber cul
+  autocmd WinLeave * set nonumber norelativenumber nocul
+augroup END
+
+" https://hackernoon.com/automatic-window-resizing-in-vim-g9n3ueb
+function! ResizeSplits()
+  if &ft == 'nerdtree'
+    return
+  elseif &ft == 'qf'
+    " Always set quickfix list to a height of 10
+    resize 10
+    return
+  else
+    set winwidth=86
+    wincmd =
+  endif
+endfunction
+
+" indent file
+map <F7> gg=G<C-o>
+
 " --- Space + x = swap windows
 noremap <Leader>x :wincmd x<CR>
 " --- Space + > = resize window
 noremap <Leader>> :vertical resize 86<CR>
 " --- split window: vertical
-nmap sv :vs<CR>
+nmap vv :vs<CR>
 
 " --- new tab
 nmap te :tabedit<CR>
@@ -107,15 +133,20 @@ nnoremap <Leader><CR> :so ~/.vimrc<CR>
 " Vim Airline Status Line
 " let g:airline_theme = 'gruvbox_material'
 " --- enable tabline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#exclude_preview = 1
+" let g:airline#extensions#tabline#enabled = 0
+" let g:airline#extensions#tabline#buffer_nr_show = 1
+" let g:airline#extensions#tabline#exclude_preview = 1
+" let g:airline_inactive_collapse=1
 
-" ---  enable powerline fonts
-let g:airline_powerline_fonts = 1
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+let g:airline_extensions = ['branch']
+let g:airline_section_b = '%-0.10{getcwd()}'
 
+set ttimeoutlen=50
+let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#branch#enabled=1
+
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#fzf#enabled = 1
 
 " define the set of text to display for each mode.
 let g:airline_mode_map = {
