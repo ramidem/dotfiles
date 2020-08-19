@@ -10,8 +10,14 @@ source $HOME/dotfiles/nvim/keys/functions.vim
 
 " Colors
 " =============================================================================
-source $HOME/dotfiles/nvim/themes/airline.vim
 
 " Plug
 " =============================================================================
 source $HOME/dotfiles/nvim/plug/coc.vim
+source $HOME/dotfiles/nvim/plug/emmet.vim
+source $HOME/dotfiles/nvim/plug/airline.vim
+
+" Add paths to node and python here
+if !empty(glob("~/.config/nvim/paths.vim"))
+  source $HOME/.config/nvim/paths.vim
+endif

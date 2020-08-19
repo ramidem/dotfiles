@@ -1,6 +1,7 @@
 " Mappings
 " -----------------------------------------------------------------------------
-let mapleader = "\<Space>"
+" let mapleader = "\<Space>"
+let mapleader = ","
 
 " Edit vimrc
 nmap ,ev :tabedit ~/dotfiles/vimrc<CR>
@@ -56,3 +57,16 @@ noremap <Leader>f :Files<CR>
 
 " --- View Buffers
 noremap <Leader>b :Buffers<CR>
+
+" Codi.Vim
+" =============================================================================
+map <c-c> :Codi!! javascript<cr>
+
+" NerdTree
+" =============================================================================
+map <C-n> :NERDTreeToggle<CR>
+
+" Commentary.Vim
+" =============================================================================
+nnoremap <Leader>/ :Commentary<CR>
+vnoremap <Leader>/ :Commentary<CR>

@@ -40,6 +40,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Respect .editorconfig
     Plug 'editorconfig/editorconfig-vim'
 
+    " Emmet.Vim
+    Plug 'mattn/emmet-vim'
+
+    " Vim Fugitive
+    Plug 'tpope/vim-fugitive'
+
+    " Vim Commentary
+    Plug 'tpope/vim-commentary'
+
     " Use release branch (recommend)
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
