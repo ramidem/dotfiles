@@ -1,7 +1,6 @@
 " Mappings
 " -----------------------------------------------------------------------------
-" let mapleader = "\<Space>"
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Edit vimrc
 nmap ,ev :tabedit ~/dotfiles/vimrc<CR>
@@ -36,10 +35,10 @@ nmap vv :vs<CR>
 " Panes
 " --- Tab Previous
 " --- Space + <direction> = switch between windows
-noremap <Leader>h :wincmd h<CR>
-noremap <Leader>j :wincmd j<CR>
-noremap <Leader>k :wincmd k<CR>
-noremap <Leader>l :wincmd l<CR>
+noremap <Left> :wincmd h<CR>
+noremap <Down> :wincmd j<CR>
+noremap <Up> :wincmd k<CR>
+noremap <Right> :wincmd l<CR>
 
 " --- Space + x = swap windows
 noremap <Leader>x :wincmd x<CR>

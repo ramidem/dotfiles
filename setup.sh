@@ -18,7 +18,7 @@ echo "ln -s ~/dotfiles/zshrc ~/.zshrc"
 echo "Installing NVM"
 echo "=============="
 echo ""
-# curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | zsh
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | zsh
 echo ""
 echo "Installed Latest NPM"
 nvm --version
@@ -28,7 +28,7 @@ echo "Installing Latest NodeJS"
 echo "========================"
 echo ""
 
-# nvm install --lts
+nvm install --lts
 echo ""
 echo "Installed Latest NodeJS"
 echo ""
@@ -38,7 +38,7 @@ echo ""
 echo "Installing Latest NPM"
 echo "========================"
 echo ""
-# nvm install-latest-npm
+nvm install-latest-npm
 echo ""
 echo "Installed Latest NPM"
 npm -v

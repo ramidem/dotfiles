@@ -17,6 +17,8 @@ set tabstop=2 shiftwidth=2
 set expandtab
 set laststatus=2
 set scrolloff=8
+set clipboard=unnamedplus
+
 
 " Messages and Info
 set showcmd
