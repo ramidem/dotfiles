@@ -75,7 +75,7 @@ let g:airline_symbols.dirty='✗'
 "? https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb
 " https://github.com/edkolev/tmuxline.vim
 let g:tmuxline_powerline_separators = 0
-let airline#extensions#tmuxline#color_template = 'insert'
+let airline#extensions#tmuxline#color_template = 'normal'
 " let g:tmuxline_preset = 'tmux'
 " custom preset with shell commands
 let g:tmuxline_preset = {

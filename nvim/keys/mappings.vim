@@ -6,7 +6,7 @@ let mapleader = "\<Space>"
 nmap ,ev :tabedit ~/dotfiles/vimrc<CR>
 
 " --- Press `jj` to escape insert mode
-:imap jj <Esc>
+:imap <C>[ <Esc>
 
 " --- Space + w = save
 noremap <Leader>w :w<CR>

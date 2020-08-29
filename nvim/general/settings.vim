@@ -42,7 +42,7 @@ set pumheight=10
 
 set scrolloff=8
 set shiftwidth=2
-" set showtabline=2
+set showtabline=1
 set showcmd
 set smartcase
 set smartindent
@@ -50,7 +50,7 @@ set smarttab
 set splitbelow
 set splitright
 
-set tabstop=2
+set tabstop=2 softtabstop=2
 set termguicolors
 set timeoutlen=500
 set t_Co=256
