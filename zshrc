@@ -57,7 +57,7 @@ alias sss="~/dotfiles/ide.sh"
 
 # npm install -g browser-sync
 # https://dev.to/fidelve/using-vim-as-your-main-editor-for-web-development-5a73
-alias serve="browser-sync start --server --files . --no-notify --host $SERVER_IP --port 8000"
+alias bserve="browser-sync start --server --files . --no-notify --host $SERVER_IP --port 8000"
 
 # copy ssh key
 alias clipssh="xclip -sel clip < ~/.ssh/id_rsa.pub"

@@ -7,6 +7,9 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
+    " Snippets
+    Plug 'honza/vim-snippets'
+
     " File Explorer
     Plug 'scrooloose/NERDTree'
 
