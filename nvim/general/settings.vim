@@ -18,8 +18,6 @@ set expandtab
 set fileencoding=utf-8
 set formatoptions-=cro
 
-set guicursor+=n:hor20-Cursor/lCursor
-
 set hlsearch
 
 set iskeyword+=-
