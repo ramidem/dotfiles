@@ -26,7 +26,7 @@ alias cleanup="sudo apt-get autoclean && sudo apt-get autoremove"
 alias dotfiles="cd ~/dotfiles && pwd"
 
 # Dropbox/Code
-alias code="cd ~/Dropbox/Code && pwd"
+alias codes="cd ~/Dropbox/Code && pwd"
 
 # Dropbox/Code/Github
 alias github="cd ~/Dropbox/Code/Github && pwd"
