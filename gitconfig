@@ -1,0 +1,10 @@
+[user]
+  name = Med Aduh
+  email = im.ramidem@gmail.com
+[core]
+  filemode = false
+  autocrlf = input
+  safecrlf = true
+  editor = nvim
+[alias]
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
