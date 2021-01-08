@@ -57,6 +57,9 @@ noremap <Leader>f :Files<CR>
 " --- View Buffers
 noremap <Leader>b :Buffers<CR>
 
+" --- Global Search
+nnoremap <leader>g :Rg<CR>
+
 " Codi.Vim
 " =============================================================================
 map <c-c> :Codi!! javascript<cr>

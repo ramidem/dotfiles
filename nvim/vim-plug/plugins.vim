@@ -54,6 +54,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Use release branch (recommend)
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+    if has('nvim')
+      Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+    else
+      Plug 'Shougo/defx.nvim'
+      Plug 'roxma/nvim-yarp'
+      Plug 'roxma/vim-hug-neovim-rpc'
+    endif
+
+    Plug 'APZelos/blamer.nvim'
+
 call plug#end()
 
 " Automatically install missing plugins on startup

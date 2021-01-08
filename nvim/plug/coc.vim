@@ -105,9 +105,3 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 " set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" =============================================================================
-" Empty value to disable preview window altogether
-" let g:fzf_preview_window = 'right:70%'
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-let $FZF_DEFAULTS_OPTS = '--reverse'

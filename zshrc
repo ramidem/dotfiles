@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rmdm/.oh-my-zsh"
 
-ZSH_THEME="dracula"
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -52,7 +52,7 @@ alias hostphp="php -S localhost:8000"
 # tee-mocks
 alias tt="tmux"
 
-# tmux setup
+# tmux ide setup
 alias sss="~/dotfiles/ide.sh"
 
 # npm install -g browser-sync

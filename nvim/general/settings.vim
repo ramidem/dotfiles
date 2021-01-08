@@ -58,8 +58,7 @@ set undodir=~/.vim/undodir
 
 set showbreak=↪\
 set list
-set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
-
+set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 " Thick Black Column
 " =============================================================================
@@ -89,4 +88,8 @@ set shortmess+=c
 
 " Codi.Vim
 let g:codi#width=25
+
+" coc-css
+" =============================================================================
+autocmd FileType scss setl iskeyword+=@-@
 

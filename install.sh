@@ -2,6 +2,7 @@
 
 # make this file executable
 # chmod 755 install.sh
+
 echo "Setting up your awesome machine!"
 echo "================================"
 echo "Updating"
@@ -9,7 +10,7 @@ echo "Updating"
 sudo apt update && sudo apt upgrade -y
 
 sudo apt install tmux tree htop curl zsh -y
- 
+
 # Clean up
 echo ""
 echo "Cleaning Up"
