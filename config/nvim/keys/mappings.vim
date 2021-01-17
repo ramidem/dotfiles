@@ -14,9 +14,6 @@ noremap <Leader>w :w<CR>
 " --- Space + q = quit
 nmap <Leader>q :q<CR>
 
-" indent file
-map <F7> gg=G<C-o>
-
 " Tabs
 " --- Tab Previous
 nmap <S-h> :tabprev<CR>
