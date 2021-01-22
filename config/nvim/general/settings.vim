@@ -63,7 +63,7 @@ set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 " Thick Black Column
 " =============================================================================
 set colorcolumn=80
-highlight colorcolumn ctermbg=0 guibg=black
+highlight colorcolumn ctermbg=0 guibg=#1b1b1b
 highlight OverLength ctermbg=black ctermfg=lightgrey
 match OverLength /\%81v.\+/
 
