@@ -105,3 +105,5 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " indent file
 map <F7> :Prettier<CR>
+
+vmap <Leader>y <Plug>(coc-format-selected)
