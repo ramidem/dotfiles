@@ -28,6 +28,7 @@ nmap qq :tabc<CR>
 
 " --- split window: vertical
 nmap vv :vs<CR>
+nmap vs :sp<CR>
 
 " Panes
 " --- Tab Previous
