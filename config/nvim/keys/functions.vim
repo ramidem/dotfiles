@@ -57,7 +57,7 @@ function! ResizeSplits()
     resize 10
     return
   else
-    set winwidth=86
+    set winwidth=100
     wincmd =
   endif
 endfunction
