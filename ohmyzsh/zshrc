@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rmdm/.oh-my-zsh"
+export BAT_THEME="gruvbox"
 
 ZSH_THEME="dracula"
 
@@ -31,29 +32,11 @@ alias codes="cd ~/Dropbox/Code && pwd"
 # Dropbox/Code/Github
 alias github="cd ~/Dropbox/Code/Github && pwd"
 
-# Dropbox/Code/Gitlab/Zuitt
-alias zuitt="cd ~/Dropbox/Code/Zuitt && pwd"
-
-# Dropbox/Code/Laracasts
-alias laracasts="cd ~/Dropbox/Code/Laracasts/ && pwd"
-
-# Apache Status
-alias apachestatus="sudo systemctl status apache2"
-
-# Apache Restart
-alias apacherestart="sudo systemctl restart apache2"
-
-# Apache Stop
-alias apachestop="sudo systemctl disable apache2"
-
-# Host PHP
-alias hostphp="php -S localhost:8000"
-
 # tee-mocks
 alias tt="tmux"
 
 # tmux ide setup
-alias sss="~/dotfiles/ide.sh"
+alias sss="~/dotfiles/tmux/ide.sh"
 
 # npm install -g browser-sync
 # https://dev.to/fidelve/using-vim-as-your-main-editor-for-web-development-5a73
