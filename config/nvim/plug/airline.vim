@@ -1,10 +1,10 @@
 " enable tabline
-" let g:airline_extensions#tabline#show_buffers = 1
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#left_sep = ''
-" let g:airline#extensions#tabline#left_alt_sep = ''
-" let g:airline#extensions#tabline#right_sep = ''
-" let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline_extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
 
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
@@ -47,7 +47,7 @@ let g:airline_mode_map = {
 " define the set of names to be displayed instead of a specific filetypes
 " (for section a and b):
 let g:airline_filetype_overrides = {
-      \ 'help':  [ 'Help', '%f' ],
+      \ 'help':  [ 'H', '%f' ],
       \ 'minibufexpl': [ 'MiniBufExplorer', '' ],
       \ 'nerdtree': [ get(g:, 'NERDTreeStatusline', 'NERD'), '' ],
       \ 'startify': [ 'startify', '' ],
