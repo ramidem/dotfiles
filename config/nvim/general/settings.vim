@@ -93,3 +93,5 @@ let g:codi#width=25
 " =============================================================================
 autocmd FileType scss setl iskeyword+=@-@
 
+" copy current file's filename
+nmap cp :let @+ = expand("%:t")<CR>
