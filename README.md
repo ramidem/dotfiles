@@ -1,11 +1,8 @@
 # Uhm, ~~`dotfile`~~ config files
 
-I just got my first ever [🍎 Mac](https://www.apple.com/macbook-air/)!
+## TODOs
 
-## Step 1
-
-Update...
-
+### 1. [ ] System update
 ```bash
 sudo softwareupdate -i -a
 xcode-select --install
@@ -13,8 +10,6 @@ xcode-select --install
 
 The Xcode Command Line Tools includes `git` and `make`.
 
-### Install this repo with `curl` available:
+### 2. [ ] Install Oh-my-zsh!
 
-```bash
-bash -c "`curl -fsSL https://raw.githubusercontent.com/webpro/dotfiles/master/remote-install.sh`"
-```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
