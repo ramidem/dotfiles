@@ -1,0 +1,41 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+export BAT_THEME="gruvbox"
+
+ZSH_THEME="dracula"
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Have alias-finder run automatically before each command.
+ZSH_ALIAS_FINDER_AUTOMATIC="true"
+
+# Plugins
+plugins=(git colored-man-pages command-not-found zsh-syntax-highlighting zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
+alias v="nvim"
+alias q="exit"
+
+# tee-mocks
+alias tt="tmux"
+
+# tmux ide setup
+alias sss="~/dotfiles/tmux/ide.sh"
+
+# Linux Stuff
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
+alias dist-upgrade="sudo apt-get dist-upgrade"
+alias cleanup="sudo apt-get autoclean && sudo apt-get autoremove"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
