@@ -4,6 +4,9 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/cask"
 
+brew "git-delta"
+brew "tmux"
+
 cask "discord"
 cask "dropbox"
 cask "firefox"

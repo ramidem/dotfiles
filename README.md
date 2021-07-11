@@ -16,10 +16,17 @@ The Xcode Command Line Tools includes `git` and `make`.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Install the essentials
+Install the essentials. `cd brew/`
 
 ```bash
-brew bundle --file ~/.dotfiles/Brewfile
+# Install Brew packages
+./beer-me-up.sh
+
+# Remove Brew packages
+./bottoms-up.sh
+
+# Remove then InstallBrew packages
+./refill.sh
 ```
 
 ### 3. [ ] Install Oh-my-zsh!
