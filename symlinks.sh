@@ -6,3 +6,6 @@
 # .gitconfig
 mv ~/.gitconfig ~/.gitconfig.bak
 ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
+
+mv ~/.zshrc ~/.zshrc.bak
+ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc

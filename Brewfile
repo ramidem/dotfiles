@@ -5,7 +5,9 @@ tap "homebrew/core"
 tap "homebrew/cask"
 
 brew "git-delta"
+brew "nvm"
 brew "tmux"
+brew "tree"
 
 cask "discord"
 cask "dropbox"
