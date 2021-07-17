@@ -34,3 +34,5 @@ Install the essentials. `cd brew/`
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
+### 4. [ ] Symlinks
