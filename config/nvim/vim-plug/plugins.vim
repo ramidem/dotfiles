@@ -55,6 +55,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Telescope FZF Native
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
+    " Presence
+    Plug 'andweeb/presence.nvim'
+
 call plug#end()
 
 " Automatically install missing plugins on startup

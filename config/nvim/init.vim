@@ -26,6 +26,8 @@ require('telescope').setup{
             -- prompt_prefix = "$ "
       }
 }
+EOF
 
+lua << EOF
 require('telescope').load_extension('fzf')
 EOF
