@@ -22,6 +22,7 @@ cask "iterm2"
 cask "libreoffice"
 cask "linear-linear"
 cask "mysqlworkbench"
+cask "rectangle"
 cask "visual-studio-code"
 cask "zoom"
 
