@@ -47,6 +47,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'APZelos/blamer.nvim'
 
+    " Telescope
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+
+    " Telescope FZF Native
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
 call plug#end()
 
 " Automatically install missing plugins on startup
