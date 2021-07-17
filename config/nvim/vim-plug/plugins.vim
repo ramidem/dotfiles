@@ -33,10 +33,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'preservim/nerdtree'
 
-    " Fuzzy Finder
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-
     " --- Make sure I am in project's root folder
     Plug 'airblade/vim-rooter'
 
@@ -46,22 +42,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Emmet.Vim
     Plug 'mattn/emmet-vim'
 
-    " Vim Fugitive
-    Plug 'tpope/vim-fugitive'
-
     " Vim Commentary
     Plug 'tpope/vim-commentary'
-
-    " Use release branch (recommend)
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-    if has('nvim')
-      Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-    else
-      Plug 'Shougo/defx.nvim'
-      Plug 'roxma/nvim-yarp'
-      Plug 'roxma/vim-hug-neovim-rpc'
-    endif
 
     Plug 'APZelos/blamer.nvim'
 

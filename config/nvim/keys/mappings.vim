@@ -2,9 +2,6 @@
 " -----------------------------------------------------------------------------
 let mapleader = "\<Space>"
 
-" Edit vimrc
-nmap ,ev :tabedit ~/dotfiles/vimrc<CR>
-
 " --- Press `jj` to escape insert mode
 :imap jj <Esc>
 
@@ -47,17 +44,6 @@ noremap <Leader>> :vertical resize 86<CR>
 " --- Source vimrc
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
 
-" Coc Stuff
-" =============================================================================
-" --- Open File
-noremap <Leader>f :Files<CR>
-
-" --- View Buffers
-noremap <Leader>b :Buffers<CR>
-
-" --- Global Search
-nnoremap <leader>g :Rg<CR>
-
 " Codi.Vim
 " =============================================================================
 map <c-c> :Codi!! javascript<cr>
@@ -70,20 +56,3 @@ map <C-n> :NERDTreeToggle<CR>
 " =============================================================================
 nnoremap <Leader>/ :Commentary<CR>
 vnoremap <Leader>/ :Commentary<CR>
-
-" Snippets
-" =============================================================================
-" Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
-
-" Use <C-j> for select text for visual placeholder of snippet.
-vmap <C-j> <Plug>(coc-snippets-select)
-
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
-
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
-
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)

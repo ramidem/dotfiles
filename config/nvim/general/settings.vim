@@ -67,8 +67,6 @@ highlight colorcolumn ctermbg=0 guibg=#1b1b1b
 highlight OverLength ctermbg=black ctermfg=lightgrey
 match OverLength /\%81v.\+/
 
-" Coc.vim Stuff
-" =============================================================================
 " --- TextEdit might fail if hidden is not set
 set hidden
 
@@ -88,10 +86,6 @@ set shortmess+=c
 
 " Codi.Vim
 let g:codi#width=25
-
-" coc-css
-" =============================================================================
-autocmd FileType scss setl iskeyword+=@-@
 
 " copy current file's filename
 nmap cp :let @+ = expand("%:t")<CR>

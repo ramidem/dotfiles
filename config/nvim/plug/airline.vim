@@ -18,9 +18,6 @@ set ttimeoutlen=50
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled = 1
 
-let g:airline#extensions#coc#enabled = 1
-let g:airline#extensions#fzf#enabled = 1
-
 " =============================================================================
 let g:airline_mode_map = {
       \ '__'     : '-',
