@@ -4,7 +4,6 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/cask"
 
-brew "docker"
 brew "git-delta"
 brew "mas"
 brew "neovim"
