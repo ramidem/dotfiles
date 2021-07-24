@@ -17,6 +17,7 @@ brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
 
 cask "discord"
+cask "docker"
 cask "dropbox"
 cask "firefox"
 cask "google-chrome"
