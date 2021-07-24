@@ -4,6 +4,7 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/cask"
 
+brew "docker"
 brew "git-delta"
 brew "mas"
 brew "neovim"
@@ -27,9 +28,13 @@ cask "linear-linear"
 cask "mysqlworkbench"
 cask "numi"
 cask "rectangle"
+cask "steam"
 cask "visual-studio-code"
 cask "zoom"
 
+mas "AdBlock", id: 1402042596
 mas "Amphetamine", id: 937984704
+mas "Grammarly for Safari", id: 1462114288
 mas "Photos Duplicate Cleaner", id: 592704001
+mas "Vimari", id: 1480933944
 mas "Xcode", id: 497799835
