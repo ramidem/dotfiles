@@ -56,7 +56,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
     " Presence
-    Plug 'andweeb/presence.nvim'
+    " Plug 'andweeb/presence.nvim'
 
 call plug#end()
 
