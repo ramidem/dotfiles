@@ -27,6 +27,9 @@ nmap qq :tabc<CR>
 nmap vv :vs<CR>
 nmap vs :sp<CR>
 
+" Select all
+nmap <C-a> gg<S-v>G
+
 " Panes
 " --- Tab Previous
 " --- Space + <direction> = switch between windows
