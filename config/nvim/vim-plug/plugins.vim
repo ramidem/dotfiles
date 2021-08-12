@@ -10,17 +10,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Snippets
     Plug 'honza/vim-snippets'
 
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
-
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
     " Gruvbox Colorscheme
     Plug 'gruvbox-community/gruvbox'
-
-    " Airline Status Line
-    Plug 'vim-airline/vim-airline'
 
     " Tmuxline
     Plug 'edkolev/tmuxline.vim'
@@ -30,8 +24,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Syntax highlighting
     Plug 'sheerun/vim-polyglot'
-
-    Plug 'preservim/nerdtree'
 
     " --- Make sure I am in project's root folder
     Plug 'airblade/vim-rooter'
@@ -45,19 +37,38 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Vim Commentary
     Plug 'tpope/vim-commentary'
 
-    Plug 'APZelos/blamer.nvim'
+    " Vim Fugitive
+    Plug 'tpope/vim-fugitive'
 
-    " Telescope
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
+    if has("nvim")
+        " Blamer
+        Plug 'APZelos/blamer.nvim'
 
-    " Telescope FZF Native
-    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+        " Telescope
+        Plug 'nvim-lua/popup.nvim'
+        Plug 'nvim-lua/plenary.nvim'
+        Plug 'nvim-telescope/telescope.nvim'
 
-    " Presence
-    " Plug 'andweeb/presence.nvim'
+        " Telescope FZF Native
+        Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
+        " Nvi-Treesitter
+        Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+        " Presence
+        Plug 'andweeb/presence.nvim'
+
+        " Lualine
+        Plug 'hoob3rt/lualine.nvim'
+
+        " Devicons
+        Plug 'kyazdani42/nvim-web-devicons' " for file icons
+        " Plug 'kyazdani42/nvim-tree.lua'
+        Plug 'ryanoasis/vim-devicons'
+
+        " Completion
+        Plug 'nvim-lua/completion-nvim'
+    endif
 call plug#end()
 
 " Automatically install missing plugins on startup
