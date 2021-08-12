@@ -19,15 +19,3 @@ source $DOTFILES/config/nvim/plug/telescope.vim
 if !empty(glob("~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
-
-lua << EOF
-require('telescope').setup{
-      defaults = {
-            -- prompt_prefix = "$ "
-      }
-}
-EOF
-
-lua << EOF
-require('telescope').load_extension('fzf')
-EOF
