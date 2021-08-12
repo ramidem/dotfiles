@@ -123,9 +123,3 @@ set updatetime=300
 
 " --- Don't pass messages to |ins-completion-menu|
 set shortmess+=c
-
-" Codi.Vim
-let g:codi#width=25
-
-" copy current file's filename
-nmap cp :let @+ = expand("%:t")<CR>

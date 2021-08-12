@@ -45,7 +45,7 @@ noremap <Leader>x :wincmd x<CR>
 noremap <Leader>> :vertical resize 86<CR>
 
 " --- Source vimrc
-nnoremap <Leader><CR> :so ~/.vimrc<CR>
+nnoremap <Leader><CR> :so %<CR>
 
 " Codi.Vim
 " =============================================================================
@@ -59,3 +59,12 @@ map <C-n> :NERDTreeToggle<CR>
 " =============================================================================
 nnoremap <Leader>/ :Commentary<CR>
 vnoremap <Leader>/ :Commentary<CR>
+
+" Codi.Vim
+" =============================================================================
+let g:codi#width=25
+
+" copy current file's filename
+" =============================================================================
+nmap cp :let @+ = expand("%:t")<CR>
+
