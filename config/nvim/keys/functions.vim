@@ -36,27 +36,28 @@ function! s:swap_down()
   exec n + 1
 endfunction
 
-noremap <silent> <A-k> :call <SID>swap_up()<CR>
-noremap <silent> <A-j> :call <SID>swap_down()<CR>
+noremap <silent> <M-k> :call <SID>swap_up()<CR>
+noremap <silent> <M-j> :call <SID>swap_down()<CR>
 
 " make the current pane obvious when switching to it
 " =============================================================================
 augroup ReduceNoise
   autocmd!
   autocmd WinEnter * :call ResizeSplits()
-  autocmd WinEnter * set number relativenumber cul
   autocmd WinLeave * set nonumber norelativenumber nocul
 augroup END
 
 " https://hackernoon.com/automatic-window-resizing-in-vim-g9n3ueb
 function! ResizeSplits()
-  if &ft == 'nerdtree'
+  if &ft == 'defx' || &ft == 'help'
+    set nonumber norelativenumber nocul
     return
   elseif &ft == 'qf'
     " Always set quickfix list to a height of 10
     resize 10
     return
   else
+    set number relativenumber cul
     set winwidth=100
     wincmd =
   endif
