@@ -71,6 +71,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
         " Completion
         Plug 'nvim-lua/completion-nvim'
+
+        " Nvim LSP
+        Plug 'neovim/nvim-lspconfig'
+
     endif
 call plug#end()
 
