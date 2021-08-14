@@ -52,11 +52,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
         " Telescope FZF Native
         Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
+        " Defx
+        Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+
         " Nvi-Treesitter
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
         " Presence
-        Plug 'andweeb/presence.nvim'
+        " Plug 'andweeb/presence.nvim'
 
         " Lualine
         Plug 'hoob3rt/lualine.nvim'
