@@ -44,6 +44,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
         " Blamer
         Plug 'APZelos/blamer.nvim'
 
+        " Vim Signify
+        Plug 'mhinz/vim-signify'
+
         " Telescope
         Plug 'nvim-lua/popup.nvim'
         Plug 'nvim-lua/plenary.nvim'
@@ -57,9 +60,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
         " Nvi-Treesitter
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-        " Presence
-        " Plug 'andweeb/presence.nvim'
 
         " Lualine
         Plug 'hoob3rt/lualine.nvim'

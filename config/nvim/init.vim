@@ -11,8 +11,10 @@ source $DOTFILES/config/nvim/keys/functions.vim
 " Plug
 " =============================================================================
 source $DOTFILES/config/nvim/plug/blamer.vim
+source $DOTFILES/config/nvim/plug/defx.vim
 source $DOTFILES/config/nvim/plug/emmet.vim
 source $DOTFILES/config/nvim/plug/lualine.vim
+source $DOTFILES/config/nvim/plug/signify.vim
 source $DOTFILES/config/nvim/plug/telescope.vim
 
 " Add paths to node and python here
