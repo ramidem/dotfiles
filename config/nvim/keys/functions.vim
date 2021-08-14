@@ -58,7 +58,10 @@ function! ResizeSplits()
     return
   else
     set number relativenumber cul
-    set winwidth=100
+
+    if winwidth(0) <= 108
+      set winwidth=108
+    endif
     wincmd =
   endif
 endfunction
