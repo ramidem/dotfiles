@@ -49,7 +49,7 @@ augroup END
 
 " https://hackernoon.com/automatic-window-resizing-in-vim-g9n3ueb
 function! ResizeSplits()
-  if &ft == 'defx' || &ft == 'help'
+  if &ft == 'fugitive' || &ft == 'defx' || &ft == 'help'
     set nonumber norelativenumber nocul
     return
   elseif &ft == 'qf'
