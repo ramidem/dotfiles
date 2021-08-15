@@ -7,79 +7,49 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-    " Snippets
-    Plug 'honza/vim-snippets'
-
-    " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
-
-    " Gruvbox Colorscheme
+    " COLORS
+    " =========================================================================
     Plug 'gruvbox-community/gruvbox'
 
-    " Tmuxline
-    Plug 'edkolev/tmuxline.vim'
-
-    " Interactive Scratchpad
-    Plug 'metakirby5/codi.vim'
-
-    " Syntax highlighting
-    Plug 'sheerun/vim-polyglot'
-
-    " --- Make sure I am in project's root folder
+    " UTILITIES
+    " =========================================================================
     Plug 'airblade/vim-rooter'
-
-    " Respect .editorconfig
     Plug 'editorconfig/editorconfig-vim'
-
-    " Emmet.Vim
+    Plug 'jiangmiao/auto-pairs'
     Plug 'mattn/emmet-vim'
-
-    " Vim Commentary
+    Plug 'metakirby5/codi.vim'
     Plug 'tpope/vim-commentary'
+    Plug 'hoob3rt/lualine.nvim'
 
-    " Vim Fugitive
+
+    " GIT
+    " =========================================================================
     Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-rhubarb'
 
     if has("nvim")
-        " Blamer
-        Plug 'APZelos/blamer.nvim'
+        " COLORS
+        " =====================================================================
+        Plug 'kyazdani42/nvim-web-devicons'
+        Plug 'ryanoasis/vim-devicons'
 
-        " Vim Signify
-        Plug 'mhinz/vim-signify'
-
-        " Telescope
+        " EXPLORER
+        " =====================================================================
         Plug 'nvim-lua/popup.nvim'
         Plug 'nvim-lua/plenary.nvim'
         Plug 'nvim-telescope/telescope.nvim'
-
-        " Telescope FZF Native
         Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-
-        " Defx
         Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
-        " Nvi-Treesitter
+        " GIT
+        " =====================================================================
+        Plug 'APZelos/blamer.nvim'
+        Plug 'mhinz/vim-signify'
+
+        " LSP Stuff
+        " =====================================================================
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-        " Lualine
-        Plug 'hoob3rt/lualine.nvim'
-
-        " Devicons
-        Plug 'kyazdani42/nvim-web-devicons' " for file icons
-        " Plug 'kyazdani42/nvim-tree.lua'
-        Plug 'ryanoasis/vim-devicons'
-
-        " Completion
         Plug 'nvim-lua/completion-nvim'
-
-        " Nvim LSP
         Plug 'neovim/nvim-lspconfig'
-
     endif
 call plug#end()
-
-" Automatically install missing plugins on startup
-autocmd VimEnter *
-  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall --sync | q
-  \| endif
