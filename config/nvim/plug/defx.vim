@@ -1,3 +1,15 @@
+if !exists('g:loaded_defx') | finish | endif
+
+" Define mappings
+"cnoreabbrev sf Defx -listed -new
+"      \ -columns=indent:mark:icon:icons:filename:git:size
+"      \ -buffer-name=tab`tabpagenr()`<CR>
+nnoremap <silent>sf :<C-u>Defx -listed -resume
+      \ -columns=indent:mark:icon:icons:filename:git:size
+      \ -buffer-name=tab`tabpagenr()`
+      \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
+nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
+
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
     " Define mappings
@@ -76,3 +88,19 @@ function! s:defx_my_settings() abort
     "     nnoremap <silent><buffer><expr> <C-g>
     "                 \ defx#do_action('print')
 endfunction
+
+call defx#custom#column('icon', {
+      \ 'directory_icon': '▸',
+      \ 'opened_icon': '▾',
+      \ 'root_icon': ' ',
+      \ })
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : 'M',
+  \ 'Staged'    : '✚',
+  \ 'Untracked' : '✭',
+  \ 'Renamed'   : '➜',
+  \ 'Unmerged'  : '═',
+  \ 'Ignored'   : '☒',
+  \ 'Deleted'   : '✖',
+  \ 'Unknown'   : '?'
+  \ })
