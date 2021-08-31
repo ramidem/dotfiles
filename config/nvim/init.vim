@@ -10,6 +10,12 @@ source $DOTFILES/config/nvim/keys/mappings.vim
 
 " Plug
 " =============================================================================
+
+" -- LSP
+source $DOTFILES/config/nvim/plug/lspconfig.vim
+source $DOTFILES/config/nvim/plug/lspinstall.vim
+
+" -- Others
 source $DOTFILES/config/nvim/plug/blamer.vim
 source $DOTFILES/config/nvim/plug/autopairs.lua
 source $DOTFILES/config/nvim/plug/defx.vim

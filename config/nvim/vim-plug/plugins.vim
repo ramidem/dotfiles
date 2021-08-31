@@ -44,5 +44,10 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+
+  " " LSP
+  " " =====================================================================
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'kabouzeid/nvim-lspinstall'
 endif
 call plug#end()
