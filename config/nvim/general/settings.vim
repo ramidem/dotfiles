@@ -1,6 +1,13 @@
 " init autocmd
 autocmd!
 
+set wildmode=longest,list,full
+set wildmenu
+
+" Ignore files
+set wildignore+=**/node_modules/*
+set wildignore+=**/.git/*
+
 " set script encoding
 scriptencoding utf-8
 " stop loading config if it's on tiny or small
