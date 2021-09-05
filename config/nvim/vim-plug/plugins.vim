@@ -16,8 +16,6 @@ Plug 'gruvbox-community/gruvbox'
 " =========================================================================
 Plug 'airblade/vim-rooter'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'hoob3rt/lualine.nvim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'metakirby5/codi.vim'
 Plug 'tpope/vim-commentary'
@@ -26,12 +24,12 @@ Plug 'tpope/vim-commentary'
 " =========================================================================
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'mhinz/vim-signify'
 
 if has("nvim")
   " GIT
   " =====================================================================
   Plug 'APZelos/blamer.nvim'
-  Plug 'mhinz/vim-signify'
 
   " " COLORS
   " " =====================================================================
@@ -49,5 +47,11 @@ if has("nvim")
   " " =====================================================================
   Plug 'neovim/nvim-lspconfig'
   Plug 'kabouzeid/nvim-lspinstall'
+
+  " UTILITIES
+  " =========================================================================
+  Plug 'hoob3rt/lualine.nvim'
+  Plug 'windwp/nvim-autopairs'
+
 endif
 call plug#end()
