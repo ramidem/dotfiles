@@ -52,6 +52,7 @@ if has("nvim")
   " =========================================================================
   Plug 'hoob3rt/lualine.nvim'
   Plug 'windwp/nvim-autopairs'
+  Plug 'nvim-lua/completion-nvim'
 
 endif
 call plug#end()
