@@ -65,7 +65,12 @@ end
 -- tsserver
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+  filetypes = {
+    "javascript",
+    "typescript",
+    "typescript.tsx",
+    "typescriptreact",
+    }
 }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
