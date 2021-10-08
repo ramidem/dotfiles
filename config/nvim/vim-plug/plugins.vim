@@ -19,6 +19,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'metakirby5/codi.vim'
 Plug 'tpope/vim-commentary'
+Plug 'vimwiki/vimwiki'
 
 " GIT
 " =============================================================================

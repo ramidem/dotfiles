@@ -21,6 +21,9 @@ set background=dark
 
 " General Settings
 " -----------------------------------------------------------------------------
+set nocompatible
+filetype plugin on
+
 set autoindent
 
 set cursorline
