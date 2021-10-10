@@ -92,12 +92,14 @@ set lazyredraw
 
 " JavaScript
 au BufNewFile,BufRead *.es6 setf javascript
+
 " TypeScript
 au BufNewFile,BufRead *.tsx setf typescriptreact
+au BufNewFile,BufRead *.ts setf typescript
+
 " Markdown
 au BufNewFile,BufRead *.md set filetype=markdown
-" Flow
-au BufNewFile,BufRead *.flow set filetype=javascript
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 
