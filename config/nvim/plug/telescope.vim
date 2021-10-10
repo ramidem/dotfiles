@@ -11,7 +11,8 @@ local actions = require('telescope.actions')
 
 require('telescope').setup{
 defaults = {
-  winblend = 1,
+  file_ignore_patterns = { "node_modules" },
+  winblend = 2,
   layout_strategy = "vertical",
   sorting_strategy = "ascending",
   layout_config = {
