@@ -1,23 +1,20 @@
 cask_args appdir: "~/Applications"
-
 tap "d12frosted/emacs-plus"
 tap "homebrew/bundle"
-tap "homebrew/core"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "mongodb/brew"
+tap "homebrew/core"
 tap "homebrew/services"
+tap "mongodb/brew"
 
 brew "bat"
 brew "clisp"
-brew "d12frosted/emacs-plus/emacs-plus@27"
 brew "fd"
 brew "git-delta"
 brew "go"
 brew "jq"
 brew "lua"
 brew "mas"
-brew "mongodb/brew/mongodb-community"
 brew "mysql"
 brew "neovim"
 brew "nvm"
@@ -30,17 +27,19 @@ brew "tree"
 brew "zsh-autosuggestions"
 brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
+brew "d12frosted/emacs-plus/emacs-plus@27"
+brew "mongodb/brew/mongodb-community"
 
 cask "alacritty"
 cask "calibre"
 cask "discord"
 cask "dropbox"
+cask "epic-games"
 cask "firefox"
 cask "font-caskaydia-cove-nerd-font"
 cask "github"
 cask "google-chrome"
 cask "insomnia"
-cask "iterm2"
 cask "libreoffice"
 cask "linear-linear"
 cask "microsoft-auto-update"
@@ -48,21 +47,23 @@ cask "microsoft-edge"
 cask "mochi"
 cask "mysqlworkbench"
 cask "notion"
-cask "notion"
 cask "numi"
-cask "numi"
+cask "obsidian"
+cask "openemu"
+cask "postman"
 cask "rectangle"
 cask "selfcontrol"
 cask "spotify"
 cask "steam"
 cask "temurin"
+cask "ultdata"
 cask "visual-studio-code"
 cask "zoom"
 
 mas "AdBlock", id: 1402042596
 mas "Amphetamine", id: 937984704
-mas "GarageBand", id: 682658836
-mas "Grammarly for Safari", id: 1462114288
-mas "Photos Duplicate Cleaner", id: 592704001
+mas "Bandwidth+", id: 490461369
+mas "Flow", id: 1423210932
+mas "Meeter", id: 1510445899
+mas "NetWorker Lite", id: 1228738830
 mas "Vimari", id: 1480933944
-mas "Xcode", id: 497799835
