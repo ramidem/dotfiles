@@ -25,3 +25,4 @@ source $DOTFILES/config/nvim/plug/lualine.vim
 source $DOTFILES/config/nvim/plug/signify.vim
 source $DOTFILES/config/nvim/plug/telescope.vim
 source $DOTFILES/config/nvim/plug/vimwiki.vim
+" source $DOTFILES/config/nvim/plug/rooter.vim

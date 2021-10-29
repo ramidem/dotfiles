@@ -14,7 +14,7 @@ Plug 'gruvbox-community/gruvbox'
 
 " UTILITIES
 " =============================================================================
-Plug 'airblade/vim-rooter'
+" Plug 'airblade/vim-rooter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'metakirby5/codi.vim'
