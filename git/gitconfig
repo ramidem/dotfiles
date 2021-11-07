@@ -4,7 +4,7 @@
 
 [core]
   filemode = false
-  autocrlf = input
+  autocrlf = false
   safecrlf = true
   editor = nvim
 
