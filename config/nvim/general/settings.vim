@@ -119,19 +119,3 @@ highlight colorcolumn ctermbg=0 guibg=#1b1b1b
 highlight OverLength ctermbg=black ctermfg=lightgrey
 match OverLength /\%81v.\+/
 
-" --- TextEdit might fail if hidden is not set
-set hidden
-
-" --- Some servers have issues with backup files
-set nobackup
-set nowritebackup
-
-" --- Give more space for displaying messages
-" set cmdheight=2
-
-" --- Having longer updatetime leads to noticeable delays and poor user
-"     experience
-set updatetime=300
-
-" --- Don't pass messages to |ins-completion-menu|
-set shortmess+=c

@@ -20,6 +20,7 @@ Plug 'mattn/emmet-vim'
 Plug 'metakirby5/codi.vim'
 Plug 'tpope/vim-commentary'
 Plug 'vimwiki/vimwiki'
+Plug 'kevinoid/vim-jsonc'
 
 " GIT
 " =============================================================================
@@ -28,32 +29,38 @@ Plug 'tpope/vim-rhubarb'
 Plug 'mhinz/vim-signify'
 
 if has("nvim")
+  " Conquer of Completion
+  " ===========================================================================
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
   " GIT
   " ===========================================================================
   Plug 'APZelos/blamer.nvim'
 
   " " COLORS
   " ===========================================================================
-  Plug 'kyazdani42/nvim-web-devicons'
+  " Plug 'kyazdani42/nvim-web-devicons'
 
   " " EXPLORER
   " ===========================================================================
-  Plug 'nvim-lua/popup.nvim'
+  " Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+  " Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
   " " LSP
   " ===========================================================================
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'kabouzeid/nvim-lspinstall'
+  " Plug 'neovim/nvim-lspconfig'
+  " Plug 'kabouzeid/nvim-lspinstall'
 
   " UTILITIES
   " ===========================================================================
   Plug 'hoob3rt/lualine.nvim'
   Plug 'windwp/nvim-autopairs'
-  Plug 'nvim-lua/completion-nvim'
+  " Plug 'nvim-lua/completion-nvim'
 
 endif
 call plug#end()
