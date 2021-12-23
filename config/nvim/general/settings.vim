@@ -119,3 +119,8 @@ highlight colorcolumn ctermbg=0 guibg=#1b1b1b
 highlight OverLength ctermbg=black ctermfg=lightgrey
 match OverLength /\%81v.\+/
 
+if has('python')
+  set pyx=2
+elseif has('python3')
+  set pyx=3
+endif

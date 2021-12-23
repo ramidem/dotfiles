@@ -9,7 +9,7 @@ echo "Updating"
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install tmux tree htop curl zsh alacritty -y
+sudo apt install delta htop tree zsh -y
 
 # Clean up
 echo ""

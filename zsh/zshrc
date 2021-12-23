@@ -24,7 +24,11 @@ COMPLETION_WAITING_DOTS="true"
 ZSH_ALIAS_FINDER_AUTOMATIC="true"
 
 # Plugins
-plugins=(git colored-man-pages command-not-found)
+# Linux
+plugins=(git colored-man-pages command-not-found zsh-autosuggestions zsh-syntax-highlighting)
+
+# Mac. Most of the pluginstall are install by brew
+# plugins=(git colored-man-pages command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -33,11 +37,6 @@ alias q="exit"
 
 # tmux ide setup
 alias df="~/.dotfiles/"
-
-# Projects
-alias mlkp="/Users/rmdm/Projects/Symph/MLKP/mlkpsymph"
-alias mcode="/Users/rmdm/Projects/Symph/MLKP/mlkpsymph/code"
-alias mfrontend="/Users/rmdm/Projects/Symph/MLKP/mlkpsymph/frontend"
 
 # tee-mocks
 alias tt="tmux"
@@ -51,26 +50,39 @@ alias upgrade="sudo apt-get upgrade"
 alias dist-upgrade="sudo apt-get dist-upgrade"
 alias cleanup="sudo apt-get autoclean && sudo apt-get autoremove"
 
+# Mac Stuff
 # zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#
 # zsh-autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#
 # zsh-history-substring-search
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey '^[OA' history-substring-search-up
-bindkey '^[OB' history-substring-search-down
+# source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+# bindkey '^[OA' history-substring-search-up
+# bindkey '^[OB' history-substring-search-down
 
+# NVM path
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#
+# Enable p10k by uncommenting the code below
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Export pyenv path
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
+
+# alias luamake=/Users/rmdm/Temp/lua-language-server/3rd/luamake/compile/luamake
+
+source $HOME/.cargo/env
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-alias luamake=/Users/rmdm/Temp/lua-language-server/3rd/luamake/compile/luamake
