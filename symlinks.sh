@@ -14,6 +14,10 @@ ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 # ~/.p10k.zsh
 ln -s ~/.dotfiles/p10k.zsh ~/.p10k.zsh
 
-# ~/.config/nvim/init.vim
+# ~/.config/nvim/
 mkdir -p ~/.config/nvim
 ln -s ~/.dotfiles/config/nvim/init.vim ~/.config/nvim/init.vim
+
+# ~/.config/i3/
+mkdir -p ~/.config/i3/
+ln -s ~/.dotfiles/config/i3/config ~/.config/i3/config

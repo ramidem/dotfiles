@@ -9,7 +9,10 @@ echo "Updating"
 
 sudo apt update && sudo apt upgrade -y
 
+# i3 stuff
+sudo apt install i3 i3lock i3status feh dmenu xbacklight thunar fonts-font-awesome papirus-icon-theme lxappearance
 sudo apt install delta htop tree zsh -y
+
 
 # Clean up
 echo ""

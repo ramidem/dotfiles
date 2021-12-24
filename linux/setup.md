@@ -41,3 +41,10 @@
   chmod 755 symlinks.sh
   ./symlinks
   ```
+7. i3
+
+Others:
+
+- [Install Spotify](https://www.spotify.com/us/download/linux/)
+- [Download Zoom](https://zoom.us/download)
+- [Download Discord](https://discord.com/download)
