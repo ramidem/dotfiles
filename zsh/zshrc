@@ -35,9 +35,9 @@ alias q="exit"
 alias df="~/.dotfiles/"
 
 # Projects
-alias mlkp="/Users/rmdm/Projects/Symph/MLKP/mlkpsymph"
-alias mcode="/Users/rmdm/Projects/Symph/MLKP/mlkpsymph/code"
-alias mfrontend="/Users/rmdm/Projects/Symph/MLKP/mlkpsymph/frontend"
+alias mlkp="~/Dropbox/Projects/Symph/MLKP/mlkpsymph"
+alias mcode="~/Dropbox/Projects/Symph/MLKP/mlkpsymph/code"
+alias mfrontend="~/Dropbox/Projects/Symph/MLKP/mlkpsymph/frontend"
 
 # tee-mocks
 alias tt="tmux"
@@ -50,6 +50,8 @@ alias update="sudo apt-get update"
 alias upgrade="sudo apt-get upgrade"
 alias dist-upgrade="sudo apt-get dist-upgrade"
 alias cleanup="sudo apt-get autoclean && sudo apt-get autoremove"
+
+alias icloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs"
 
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

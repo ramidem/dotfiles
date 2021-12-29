@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# create symlinks for stuff
+# chmod 755 nvm_use.sh
+
+NVMRC=.nvmrc
+if test -f "$FILE"; then
+  echo "YES"

@@ -1,4 +1,4 @@
-let g:coc_global_extensions=['coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-emmet']
+let g:coc_global_extensions=['coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-emmet', 'coc-java', 'coc-rls']
 
 " --- TextEdit might fail if hidden is not set
 set hidden
@@ -58,7 +58,7 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>N <Plug>(coc-rename)
 
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
