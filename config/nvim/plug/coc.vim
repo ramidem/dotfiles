@@ -1,4 +1,4 @@
-let g:coc_global_extensions=['coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-emmet']
+let g:coc_global_extensions=['coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-emmet', 'coc-rls']
 
 " --- TextEdit might fail if hidden is not set
 set hidden
