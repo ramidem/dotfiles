@@ -38,6 +38,14 @@ alias q="exit"
 # tmux ide setup
 alias df="~/.dotfiles/"
 
+<<<<<<< HEAD
+=======
+# Projects
+alias mlkp="~/Dropbox/Projects/Symph/MLKP/mlkpsymph"
+alias mcode="~/Dropbox/Projects/Symph/MLKP/mlkpsymph/code"
+alias mfrontend="~/Dropbox/Projects/Symph/MLKP/mlkpsymph/frontend"
+
+>>>>>>> mac-stuff
 # tee-mocks
 alias tt="tmux"
 
@@ -51,6 +59,8 @@ alias dist-upgrade="sudo apt-get dist-upgrade"
 alias cleanup="sudo apt-get autoclean && sudo apt-get autoremove"
 
 # Mac Stuff
+alias icloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs"
+
 # zsh-syntax-highlighting
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #

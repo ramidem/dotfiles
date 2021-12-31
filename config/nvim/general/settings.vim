@@ -90,6 +90,9 @@ set t_BE=
 " do not redraw while executing macros (good performance config)
 set lazyredraw
 
+"
+au BufNewFile,BufRead *.rs set 
+
 " JavaScript
 au BufNewFile,BufRead *.es6 setf javascript
 

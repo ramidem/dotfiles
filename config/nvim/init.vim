@@ -14,18 +14,13 @@ source $DOTFILES/config/nvim/keys/mappings.vim
 " Plug
 " =============================================================================
 
-" -- LSP
-" source $DOTFILES/config/nvim/plug/lspconfig.vim
-" source $DOTFILES/config/nvim/plug/lspinstall.vim
-
 " -- Others
 source $DOTFILES/config/nvim/plug/autopairs.lua
+source $DOTFILES/config/nvim/plug/ranger.vim
 source $DOTFILES/config/nvim/plug/blamer.vim
-" source $DOTFILES/config/nvim/plug/completion.vim
-" source $DOTFILES/config/nvim/plug/defx.vim
 source $DOTFILES/config/nvim/plug/emmet.vim
 source $DOTFILES/config/nvim/plug/lualine.vim
 source $DOTFILES/config/nvim/plug/signify.vim
 source $DOTFILES/config/nvim/plug/telescope.vim
 source $DOTFILES/config/nvim/plug/vimwiki.vim
-" source $DOTFILES/config/nvim/plug/rooter.vim
+source $DOTFILES/config/nvim/plug/netrw.vim

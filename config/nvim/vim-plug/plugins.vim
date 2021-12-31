@@ -37,10 +37,6 @@ if has("nvim")
   " ===========================================================================
   Plug 'APZelos/blamer.nvim'
 
-  " " COLORS
-  " ===========================================================================
-  " Plug 'kyazdani42/nvim-web-devicons'
-
   " " EXPLORER
   " ===========================================================================
   " Plug 'nvim-lua/popup.nvim'
@@ -48,6 +44,9 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+  Plug 'francoiscabrol/ranger.vim'
+  Plug 'rbgrouleff/bclose.vim'
 
   " Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
