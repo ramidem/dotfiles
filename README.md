@@ -12,3 +12,9 @@ Trying to move away from MacOs for development work. The idea is to move the dev
         - `sudo ufw status`
             - `sudo ufw allow ssh`
 - TODO acquire one or more Raspberry PIs
+- add email and name to gitconfig
+- clone this `git clone git@github.com:ramidem/dotfiles.git ~/.dotfiles`
+- you need to setup zsh
+- install oh-my-zsh
+- you need to install `stow` before executing `ubuntu`
+	- NOTE: `locale` stuff errors when you execute from host computer's terminal
