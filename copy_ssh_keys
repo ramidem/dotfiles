@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# DRAFT!
+
+# Check for the correct number of arguments
+if [ "$#" -ne 3 ]; then
+    echo "Usage: $0 <path_to_ssh_directory> <username> <remote_ip>"
+    exit 1
+fi
+
+# Arguments
+SSH_DIR="$1"
+USERNAME="$2"
+REMOTE_IP="$3"
+
+# Check if the SSH directory exists locally
+if [ ! -d "$SSH_DIR" ]; then
+    echo "Error: SSH directory does not exist: $SSH_DIR"
+    exit 1
+fi
+
+# Check if the SSH public key file exists locally
+if [ ! -f "$SSH_DIR/id_ed25519" ]; then
+    echo "Error: SSH public key file not found: $SSH_DIR/id_ed25519"
+    exit 1
+fi
+
+if [ ! -f "$SSH_DIR/id_ed25519.pub" ]; then
+    echo "Error: SSH public key file not found: $SSH_DIR/id_ed25519.pub"
+    exit 1
+fi
+
+# Copy the SSH public key to the remote server and set permissions
+cat "$SSH_DIR/id_ed25519" | ssh "$USERNAME@$REMOTE_IP" "mkdir -p ~/.ssh && cat >> ~/.ssh/id_ed25519 && chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_ed25519"
+
+cat "$SSH_DIR/id_ed25519.pub" | ssh "$USERNAME@$REMOTE_IP" "mkdir -p ~/.ssh && cat >> ~/.ssh/id_ed25519.pub && chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_ed25519.pub"
+
+# Check the exit status of the SSH command
+if [ $? -eq 0 ]; then
+    echo "SSH public key copied and permissions set successfully."
+else
+    echo "Error: Failed to copy SSH public key or set permissions."
+fi
+
