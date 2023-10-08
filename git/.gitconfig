@@ -1,0 +1,11 @@
+[user]
+	email = im.ramidem@gmail.com
+	name = med aduh
+
+[core]
+	filemode = false
+	autocrlf = false
+	safecrlf = true
+
+[alias]
+	pretty-log = log --pretty=format:'%C(auto)%h %C(brightblack)[%an]%Creset %s%d %C(brightblack)(%ad)' --date=relative --graph
