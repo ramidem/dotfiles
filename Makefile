@@ -14,4 +14,6 @@ update:
 
 vm/copy:
 	@echo "Copying contents of .dotfiles..."
-	@rsync -avz -e ssh $(MAKEFILE_DIR)/ $(DEBIAN_USER)@$(DEBIAN_ADDR):/home/$(DEBIAN_USER)/.dotfiles/
+	@rsync -avz -e 'ssh -p22' \
+	--exclude='.git/' \
+	$(MAKEFILE_DIR)/ $(DEBIAN_USER)@$(DEBIAN_ADDR):/home/$(DEBIAN_USER)/.dotfiles/

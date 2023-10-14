@@ -1,11 +1,10 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 pushd $DOTFILES
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+IFS=',' read -ra folders <<< "$STOW_FOLDERS"
+for folder in "${folders[@]}"
 do
     echo "stow $folder"
-    stow -D $folder
-    stow $folder
+    stow -D "$folder"
+    stow "$folder"
 done
 popd
-
-
