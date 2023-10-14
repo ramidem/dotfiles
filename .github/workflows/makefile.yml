@@ -16,5 +16,4 @@ jobs:
     
     - name: Run Makefile
       run:
-        make vm/bootstrap
         make vm/copy
