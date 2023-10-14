@@ -4,20 +4,14 @@
 
 Trying to move away from MacOs for development work. The idea is to move the development environment to the cloud or just home server which I can access anywhere and on whatever device.
 
-**NOTES**
+**DEBIAN TODOs**
 
-- `ssh-copy-id` or something similar. see `copy_ssh_keys`.
-    - for now, just create ssh key from the VM
-    - NOTE: if `ssh -T git@github.com` fails, try;
-        - `sudo -aef | grep sshd`
-            - `sudo systemctl start ssh`
-        - `sudo ufw status`
-            - `sudo ufw allow ssh`
-- TODO acquire one or more Raspberry PIs
-- add email and name to gitconfig
-- clone this `git clone git@github.com:ramidem/dotfiles.git ~/.dotfiles`
-- you need to setup zsh
-- install oh-my-zsh
-- set zsh as the default shell
-- you need to install `stow` before executing `ubuntu`
-	- NOTE: `locale` stuff errors when you execute from host computer's terminal
+You need to install these packages on a freshly installed debian before `vm/copy`.
+
+- `sudo`
+- `net-tools`
+- `rsync`
+- `make`
+
+`sudo ifconfig` to get the IP and `export` it as `DEBIAN_ADDR` on your local machine. Then, `make vm/copy` the contents of `.dotfiles/`
+
