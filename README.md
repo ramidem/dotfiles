@@ -12,6 +12,7 @@ You need to install these packages on a freshly installed debian before `vm/copy
 - `net-tools`
 - `rsync`
 - `make`
+- `stow`
 
 `sudo ifconfig` to get the IP and `export` it as `DEBIAN_ADDR` on your local machine. Then, `make vm/copy` the contents of `.dotfiles/`
 
