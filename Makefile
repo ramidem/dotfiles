@@ -9,14 +9,24 @@ vm/bootstrap:
 	make vm/update
 	sleep 1
 	make vm/install
+	make vm/stow
 
 vm/update:
 	@echo "Updating..."
 	sudo apt update
+	echo 'LANGUAGE="en_US:en"' >> ~/.bashrc
+	echo 'LC_ALL="en_US.UTF-8"' >> ~/.bashrc
+	echo 'LC_CTYPE="en_US.UTF-8"' >> ~/.bashrc
+	echo 'LANG="en_US.UTF-8"' >> ~/.bashrc
+	. ~/.bashrc
+	sleep 1
 
 vm/install:
 	@echo "Installing packages..."
-	sudo apt install git tmux zsh -y
+	sudo apt install neovim git tmux zsh stow -y
+
+vm/stow:
+	./debian
 
 vm/zsh:
 	# do this last

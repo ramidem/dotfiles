@@ -9,10 +9,16 @@ Trying to move away from MacOs for development work. The idea is to move the dev
 You need to install these packages on a freshly installed debian before `vm/copy`.
 
 - `sudo`
-- `net-tools`
 - `rsync`
 - `make`
 - `stow`
 
 `sudo ifconfig` to get the IP and `export` it as `DEBIAN_ADDR` on your local machine. Then, `make vm/copy` the contents of `.dotfiles/`
 
+---
+login root
+install rsync
+install sudo
+add user to sudoers `usermod -aG sudo rmdm`
+`ip addr`
+ssh to vm
