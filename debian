@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$STOW_FOLDERS" ]; then
-    STOW_FOLDERS="bin,git,zsh"
+    STOW_FOLDERS="bin,git,zsh,nvim"
 fi
 
 if [ -z "$DOTFILES" ]; then
